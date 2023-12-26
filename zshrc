@@ -10,22 +10,26 @@ fi
 zplug load
 
 # modif prompt
-source ~/gitstatus/gitstatus.prompt.zsh
+source ~/.gitstatus/gitstatus.prompt.zsh
 RPROMPT='$GITSTATUS_PROMPT'
 PROMPT='%F{yellow}%~%f | %F{cyan}%*%f > '
 
 # alias
-alias work="cd ~/code/so_long/"
-alias vpnthm="sudo openvpn /Users/mathieu/cyber/tryhackme/vpn/m3taaa.ovpn"
+alias cls="clear"
+alias zshrc="vim ~/.zshrc"
 alias copy="pbcopy"
-alias cgoinfre="bash ~/code/scripts/clean_goinfre.sh"
+alias py="python3"
+alias work="cd ~/code/42_pipex"
+alias code="cd ~/code"
+alias cgoinfre="sh ~/.scripts/cgoinfre.sh"
+alias spotify="open -a Spotify"
+alias discord="open -a Discord"
+alias slack="open -a Slack"
+alias brave="open -a Brave\ Browser"
 #color ls
 export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3 # run chruby to see actual version
+if [ "$TMUX" = "" ]; then tmux; fi
+
 USER=mathieu
 export USER
-# run tmux
-tmux
