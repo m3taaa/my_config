@@ -1,17 +1,9 @@
--- Requirements
-package.path = ';/Users/mathieu/.config/nvim/plugin-config/plugins.lua'
-require('plugin-config.plugins')
--- Global Settings
-vim.o.termguicolors = true
-vim.o.syntax = 'enable'
-vim.o.smartcase = true
-vim.o.expandtab = false
-vim.o.autoindent = true
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
-vim.o.number = true
-vim.o.cursorline = true
-vim.cmd("colorscheme tokyonight")
-
-
+--
+require("my_config.core.options")
+require("my_config.core.keymaps")
+require("my_config.plugins-setup")
+require("my_config.plugins.lualine")
+--
+vim.cmd("colorscheme tokyonight-night")
 print("init.lua charged 🐼")
+--
